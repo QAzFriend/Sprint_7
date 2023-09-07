@@ -3,6 +3,7 @@ package qa_scooter.praktikum;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import qa_scooter.praktikum.constants.Url;
@@ -61,7 +62,7 @@ public class CourierLoginTest {
         assertEquals("Неверный статус код", HttpStatus.SC_NOT_FOUND, loginResponse.statusCode());
     }
 
-    @Before
+    @After
     public void tearDown() {
         courierClient.delete(id);
     }

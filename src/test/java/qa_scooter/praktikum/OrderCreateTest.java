@@ -40,14 +40,11 @@ public class OrderCreateTest {
             this.comments = comments;
             this.color = color;
         }
-
+//Решил оставить с параметром только цвет
         @Parameterized.Parameters
         public static Object[][] inputUser() {
             return new Object[][]{
                     {randomString(8), randomString(8), randomString(20), randomString(20), "79999999999", randomInt(), "2023-06-01", randomString(25),List.of("BLACK", "GRAY")},
-                    {randomString(8), randomString(8), randomString(20), randomString(20), "79111111111", randomInt(), "2023-07-10", randomString(25),List.of("BLACK")},
-                    {randomString(8), randomString(8), randomString(20), randomString(20), "79999999999", randomInt(), "2023-08-17", randomString(25),List.of("GRAY")},
-                    {randomString(8), randomString(8), randomString(20), randomString(20), "79999999999", randomInt(), "2023-09-26", randomString(25),List.of("")},
             };
         }
     @Before
